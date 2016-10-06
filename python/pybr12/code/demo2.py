@@ -1,10 +1,12 @@
 import cv2
 
-video = cv2.VideoCapture(0)
-video.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 320)
-video.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 240)
+camera = cv2.VideoCapture(0)
 
-_, imagem = video.read()
+k = 0
 
-cv2.imshow("cv", imagem)
-cv2.waitKey(2000)
+while k != 27:
+    _, imagem = camera.read()
+    cv2.imshow("demo2", imagem)
+    k = cv2.waitKey(10)
+    k = k & 0xEFFFFF  # tira modificadores
+

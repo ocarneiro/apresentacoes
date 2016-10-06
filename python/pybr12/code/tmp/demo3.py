@@ -1,0 +1,11 @@
+import cv2, numpy as np
+video = cv2.VideoCapture(0)
+video.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 320)
+video.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 240)
+_, imagem = video.read()
+min = np.array([0,0,80])
+max = np.array([30,30,255])
+mascara = cv2.inRange(imagem, min, max)
+cv2.imshow("original", imagem)
+cv2.imshow("vermelho", mascara)
+cv2.waitKey(2000)

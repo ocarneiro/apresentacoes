@@ -1,8 +1,10 @@
 import cv2
 
-cam = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(0)
 
-_, im = cam.read()
+_, imagem = camera.read()
 
-cv2.imshow("cv", im)
+cv2.imshow("", imagem)
 cv2.waitKey(2000)
+
+cv2.imwrite("foto.jpg", imagem)
