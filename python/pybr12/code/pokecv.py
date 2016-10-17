@@ -47,44 +47,23 @@ class Poke(object):
         circle_center = self.center_point
         circle_radius = self.radius
 
-        # upper tail (should be black)
-        tail_width = 0.2
-        p1x = circle_center[0] - int(tail_width * circle_radius)
-        p1y = circle_center[1] + circle_radius
-
-        p2x = circle_center[0] + int(tail_width * circle_radius)
-        p2y = circle_center[1] + circle_radius
-
-        p12x = circle_center[0] - int(tail_width * circle_radius)
-        p12y = circle_center[1] + int(tail_width + 1.0 * circle_radius)
-
-        p3x = circle_center[0] + int(tail_width * circle_radius)
-        p3y = circle_center[1] + int(tail_width + 1.0 * circle_radius)
-
-        # lower tail
-        p11x = circle_center[0] - int(tail_width * circle_radius)
-        p11y = circle_center[1] + int(1.2 * circle_radius)
-
-        p4x = circle_center[0] + int(tail_width * circle_radius)
-        p4y = circle_center[1] + int(1.2 * circle_radius)
-
-        p10x = circle_center[0] - int(0.3 * circle_radius)
-        p10y = circle_center[1] + int(1.3 * circle_radius)
-
-        p5x = circle_center[0] + int(0.01 * circle_radius)
-        p5y = circle_center[1] + int(1.3 * circle_radius)
-
-        p9x = circle_center[0] - int(0.15 * circle_radius)
-        p9y = circle_center[1] + int(1.4 * circle_radius)
-
-        p6x = circle_center[0] + int(0.15 * circle_radius)
-        p6y = circle_center[1] + int(1.4 * circle_radius)
-
-        p8x = circle_center[0] - int(0.5 * circle_radius)
-        p8y = circle_center[1] + int(1.5 * circle_radius)
-
-        p7x = circle_center[0] - int(0.05 * circle_radius)
-        p7y = circle_center[1] + int(1.6 * circle_radius)
+        # tail
+        p1x = circle_center[0]
+        p1y = circle_center[1] + int(0.6 * circle_radius)
+        p2x = circle_center[0] + int(1.1 * circle_radius)
+        p2y = circle_center[1] + int(0.6 * circle_radius)
+        p3x = circle_center[0] + int(1.1 * circle_radius)
+        p3y = circle_center[1] + int(0.05 * circle_radius)
+        p4x = circle_center[0] + int(2 * circle_radius)
+        p4y = circle_center[1] - int(0.25 * circle_radius)
+        p5x = circle_center[0] + int(2.2 * circle_radius)
+        p5y = circle_center[1] + int(0.5 * circle_radius)
+        p6x = circle_center[0] + int(1.5 * circle_radius)
+        p6y = circle_center[1] + int(0.5 * circle_radius)
+        p7x = circle_center[0] + int(1.1 * circle_radius)
+        p7y = circle_center[1] + int(1 * circle_radius)
+        p8x = circle_center[0]
+        p8y = circle_center[1] + int(1 * circle_radius)
 
         points = np.array([[p1x, p1y],
                            [p2x, p2y],
@@ -93,11 +72,7 @@ class Poke(object):
                            [p5x, p5y],
                            [p6x, p6y],
                            [p7x, p7y],
-                           [p8x, p8y],
-                           [p9x, p9y],
-                           [p10x, p10y],
-                           [p11x, p11y],
-                           [p12x, p12y]])
+                           [p8x, p8y]])
         return points
 
     def eye(self, side):
