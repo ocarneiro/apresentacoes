@@ -11,7 +11,7 @@ modo_espelho = True  # inverte a imagem horizontalmente
 tecla = 0
 
 # ler stream da webcam
-captura = cv2.VideoCapture(0)
+captura = cv2.VideoCapture(1)
 
 # quantidade de arremessos
 arremessos = 0

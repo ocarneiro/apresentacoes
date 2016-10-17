@@ -1,12 +1,14 @@
-import cv2, numpy as np
+import cv2
+import numpy as np
+
 camera = cv2.VideoCapture(0)
-minimo = np.array([145,120,120])
-maximo = np.array([180,255,255])
+minimo = np.array([100, 20, 20])
+maximo = np.array([132, 255, 255])
 _, imagem = camera.read()
 hsv = cv2.cvtColor(imagem, cv2.COLOR_BGR2HSV)
 mascara = cv2.inRange(hsv, minimo, maximo)
-cv2.imshow("imagem",imagem)
-cv2.imshow("mascara",mascara)
+cv2.imshow("imagem", imagem)
+cv2.imshow("mascara", mascara)
 cv2.waitKey(0)
 
 # 0 a 10 = vermelho
