@@ -12,7 +12,7 @@ modo_espelho = True  # inverte a imagem horizontalmente
 tecla = 0
 
 # ler stream da webcam
-captura = cv2.VideoCapture(0)
+captura = cv2.VideoCapture(1)
 
 while tecla != 27:  # tecla ESC
     _, imagem = captura.read()
@@ -31,8 +31,8 @@ while tecla != 27:  # tecla ESC
     #   valores para S e V:
     #       manter próximo de 0 no mínimo
     #       e próximo de 255 para o máximo
-    minimo = np.array([0,80,80])
-    maximo = np.array([15,255,255])
+    minimo = np.array([100,80,80])
+    maximo = np.array([150,255,255])
     cor_alvo_min = minimo
     cor_alvo_max = maximo
 

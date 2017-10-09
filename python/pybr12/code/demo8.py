@@ -2,7 +2,7 @@ import cv2, numpy as np
 
 camera = cv2.VideoCapture(1)
 minimo = np.array([100,80,80])
-maximo = np.array([150,255,255])
+maximo = np.array([130,255,255])
 
 tecla = 0
 

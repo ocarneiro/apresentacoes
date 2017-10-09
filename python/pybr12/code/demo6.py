@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-camera = cv2.VideoCapture(0)
-minimo = np.array([100, 20, 20])
+camera = cv2.VideoCapture(1)
+minimo = np.array([100, 80, 80])
 maximo = np.array([132, 255, 255])
 _, imagem = camera.read()
 hsv = cv2.cvtColor(imagem, cv2.COLOR_BGR2HSV)
