@@ -1,0 +1,12 @@
+1. Documentação
+2. Escopo
+3. Software necessário
+4. Produtos Derivados
+5. Livre redistribuição
+6. Atribuição
+7. Não discriminação de pessoas ou grupos
+8. Não discriminação de campos de utilização
+9. Distribuição da licença
+10. A Licença não deve ser específica de um produto
+11. A Licença não deve restringir outros softwares ou hardwares
+12. A Licença deve ser tecnologicamente neutra
